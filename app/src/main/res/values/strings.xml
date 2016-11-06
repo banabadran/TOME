@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">TOME</string>
+    <string name="Name">Name</string>
+    <string name="btnSignIn">SignIn</string>
+    <string name="etEmail">Email</string>
+    <string name="etPassword">Password</string>
+    <string name="etRePassword">RePassword</string>
+    <string name="btnSave">Save</string>
+    <string name="btnForgetPassword">Forget Password</string>
+    <string name="tvToMe">ToMe</string>
+    <string name="btnHelp">Help</string>
+    <string name="btnOk">Ok</string>
+</resources>
