@@ -38,7 +38,7 @@ private EditText etEmail;
         reference.push().setValue("hello world");
         etEmail=(EditText) findViewById(R.id.etEmail);
         etPassword=(EditText)findViewById(R.id.etpassword);
-        etRePassword=(EditText)findViewById(R.id.etRepassword);
+        etRePassword=(EditText)findViewById(R.id.etRePassword);
         etName=(EditText)findViewById(R.id.etName);
         btnSave=(Button)findViewById(R.id.btnSave);
         auth= FirebaseAuth.getInstance();
@@ -83,10 +83,11 @@ private EditText etEmail;
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent(SignIn.this, TheFirst.class);
+              //  Intent i=new Intent(SignIn.this, TheFirst.class);
                 dataHandler();
-              startActivity(i);
+            //  startActivity(i);
             }
+
         });
     }
     private FirebaseAuth.AuthStateListener authStateListener1=new FirebaseAuth.AuthStateListener()

@@ -34,7 +34,7 @@ public class TheFirst extends AppCompatActivity
             etPassword.setError("wrong Password");
             isok=false;
         }
-        if(isok)
-            Crea
+        //if(isok)
+           // CreatAcount()
     }
 }

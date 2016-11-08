@@ -22,7 +22,7 @@ public class Help extends AppCompatActivity {
         setContentView(R.layout.activity_help);
         btnSignIn=(Button)findViewById(R.id.btnSignIn);
         btnForgotPassword=(Button)findViewById(R.id.btnForgetPassword);
-       // eventHandler();
+        eventHandler();
 
     }
     private void eventHandler()
@@ -30,9 +30,8 @@ public class Help extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               // Intent i=new Intent()....
-                //dataHandler();
-                //startActivity(i);
+                Intent i=new Intent(Help.this,SignIn.class);
+                startActivity(i);
 
             }
         });

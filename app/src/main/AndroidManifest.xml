@@ -19,7 +19,11 @@
         <activity android:name=".TheFirst" />
         <activity android:name="." />
         <activity android:name=".List" />
-        <activity android:name=".ForgetPassword"></activity>
+        <activity android:name=".ForgetPassword" />
+        <activity android:name=".SavePhotoAndVideo" />
+        <activity android:name=".SaveDiary" />
+        <activity android:name=".SaveMassage" />
+        <activity android:name=".Confirmation"></activity>
     </application>
 
 </manifest>
