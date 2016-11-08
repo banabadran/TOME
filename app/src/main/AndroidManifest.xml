@@ -16,7 +16,10 @@
             </intent-filter>
         </activity>
         <activity android:name=".Help" />
-        <activity android:name=".TheFirst"></activity>
+        <activity android:name=".TheFirst" />
+        <activity android:name="." />
+        <activity android:name=".List" />
+        <activity android:name=".ForgetPassword"></activity>
     </application>
 
 </manifest>

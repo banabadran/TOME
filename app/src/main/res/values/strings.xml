@@ -10,4 +10,9 @@
     <string name="tvToMe">ToMe</string>
     <string name="btnHelp">Help</string>
     <string name="btnOk">Ok</string>
+    <string name="btnPhoto">Photo</string>
+    <string name="btnMassage">Massage</string>
+    <string name="btnDiary">Diary</string>
+    <string name="btnVideo">Video</string>
+    <string name="btnSend">Send</string>
 </resources>

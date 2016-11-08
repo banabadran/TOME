@@ -23,7 +23,18 @@ public class TheFirst extends AppCompatActivity
         btnOk=(Button)findViewById(R.id.btnOk);
         etPassword=(EditText)findViewById(R.id.etPassword);
         tvToMe=(TextView)findViewById(R.id.tvToMe);
+      //  eventHandler();
 
-
+    }
+    private void dataHandler(){
+        boolean isok=true;
+        String stPassword=etPassword.getText().toString();
+        if(stPassword.length()==0)
+        {
+            etPassword.setError("wrong Password");
+            isok=false;
+        }
+        if(isok)
+            Crea
     }
 }

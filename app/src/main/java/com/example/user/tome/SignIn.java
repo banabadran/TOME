@@ -73,7 +73,8 @@ private EditText etEmail;
             isOk = false;
         }
         if (isOk) {
-            creatAcount(stEmail, stpassword);
+            //msh 3arfe aza crraet ao sign in
+           creatAcount(stEmail, stpassword);
         }
     }
 
@@ -82,9 +83,9 @@ private EditText etEmail;
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-             // Intent i=new Intent(SignIn.this, 2lshashh 2l2ola.class);
+                Intent i=new Intent(SignIn.this, TheFirst.class);
                 dataHandler();
-              //  startActivity(i);
+              startActivity(i);
             }
         });
     }
