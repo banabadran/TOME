@@ -15,4 +15,21 @@
     <string name="btnDiary">Diary</string>
     <string name="btnVideo">Video</string>
     <string name="btnSend">Send</string>
+    <string name="logIn">Log in</string>
+    <string name="signup">Sign Up</string>
+    <string name="btnSignUp">SignUp</string>
+    <string name="etText">Text</string>
+    <string name="etNumber">Number</string>
+    <string name="dWhen">When</string>
+    <string name="tvGender">Gender</string>
+    <string name="etSearch">Search</string>
+    <string name="tvIsIncome">isIncome</string>
+    <string name="IsIncome">tvIsIncome</string>
+    <string name="Sms">bthSms</string>
+    <string name="btnSms">Sms</string>
+    <string name="etTitle">Title</string>
+    <string name="etDate">Date</string>
+    <string name="etWhen">Date</string>
+    <string name="etPhone">Phone</string>
+    <string name="title_activity_listsms">listsms</string>
 </resources>

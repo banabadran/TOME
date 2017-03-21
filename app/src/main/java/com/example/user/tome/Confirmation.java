@@ -17,21 +17,37 @@ public class Confirmation extends AppCompatActivity {
         setContentView(R.layout.activity_confirmation);
 
         etPassword=(EditText)findViewById(R.id.etPassword);
-        //eventHandler();
+        btnOk=(Button)findViewById(R.id.btnOk);
+        eventHandler();
     }
-    private void dataHandler(){
-        String stPassword=etPassword.getText().toString();
-        Boolean isOk=true;
-        if(stPassword.length()==0)
+    private void dataHandler() {
+
+        String stPassword = etPassword.getText().toString();
+        boolean isOk = true;
+
+        if (stPassword.length()<1) {
             etPassword.setError("wrong Password");
-           isOk=false;
+            isOk = false;
+
+        }
+      if (isOk)
+      {
+//          Intent i=new Intent(Confirmation.this,SaveSms.class);
+//          startActivity(i);
+
+      }
+
     }
+
     private void eventHandler()
     {
         btnOk.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent i=new Intent()
+                dataHandler();
+                Intent i=new Intent(Confirmation.this,SavePhotoAndVideo.class);
+                startActivity(i);
+
             }
         });
     }

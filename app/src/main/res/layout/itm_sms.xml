@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/etSearch"
+            android:hint="@string/Name" />
+
+        <EditText
+            android:layout_width="197dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/etText"
+            android:hint="@string/etText" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etNumber"
+            android:hint="@string/etNumber" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/etDate"
+            android:hint="@string/etDate" />
+
+        <EditText
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/isIncome"
+            android:layout_weight="0.11"
+            android:hint="@string/IsIncome" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAdd"
+            android:layout_gravity="right"
+            android:src="@android:drawable/ic_input_add" />
+
+
+    </LinearLayout>
+</LinearLayout>

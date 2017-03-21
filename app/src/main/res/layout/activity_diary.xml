@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".AddDiary">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1">
+
+        <EditText
+            android:layout_width="224dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/etTitle"
+            android:hint="@string/etTitle" />
+
+        <EditText
+            android:layout_width="212dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/etSearch"
+            android:hint="@string/etText" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/etDate"
+            android:hint="@string/etDate" />
+
+        <RatingBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/ratingBar"
+            android:layout_gravity="center_horizontal" />
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:layout_width="64dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnDel"
+                android:layout_gravity="right"
+                android:layout_weight="0.12"
+                android:src="@android:drawable/ic_menu_delete" />
+
+            <ImageButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/btnAdd"
+                android:layout_gravity="right"
+                android:layout_weight="0.13"
+                android:src="@android:drawable/ic_input_add" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

@@ -48,7 +48,7 @@
             android:id="@+id/btnHelp"
             android:layout_gravity="bottom"
             android:layout_weight="0.33"
-            android:hint="@string/btnHelp" />
+            android:text="Help" />
 
         <Button
             android:layout_width="0dp"
@@ -56,7 +56,7 @@
             android:id="@+id/btnOk"
             android:layout_gravity="bottom"
             android:layout_weight="0.33"
-            android:hint="@string/btnOk" />
+            android:text="Ok" />
 
     </LinearLayout>
 

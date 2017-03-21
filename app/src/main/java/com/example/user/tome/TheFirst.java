@@ -1,12 +1,14 @@
 package com.example.user.tome;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import com.google.firebase.auth.FirebaseAuth;
+import com.google.android.gms.common.SignInButton;
 
 public class TheFirst extends AppCompatActivity
 {
@@ -23,18 +25,44 @@ public class TheFirst extends AppCompatActivity
         btnOk=(Button)findViewById(R.id.btnOk);
         etPassword=(EditText)findViewById(R.id.etPassword);
         tvToMe=(TextView)findViewById(R.id.tvToMe);
-      //  eventHandler();
+       eventHandler();
 
     }
     private void dataHandler(){
-        boolean isok=true;
         String stPassword=etPassword.getText().toString();
+        boolean isok=true;
+
         if(stPassword.length()==0)
         {
             etPassword.setError("wrong Password");
             isok=false;
         }
-        //if(isok)
-           // CreatAcount()
+        if(isok)//true password
+        {
+            Intent i = new Intent(TheFirst.this, MainActivity.class);
+
+            startActivity(i);
+        }
+
+    }
+    private void eventHandler()
+    {
+        btnHelp.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent i = new Intent(TheFirst.this, Help.class);
+                startActivity(i);
+            }
+            });
+        btnOk.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+
+
+                dataHandler();
+
+            }
+            });
+
     }
 }

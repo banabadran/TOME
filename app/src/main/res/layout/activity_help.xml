@@ -12,11 +12,12 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/btnSignIn"
+        android:id="@+id/btnSignUp"
         android:layout_above="@+id/btnForgetPassword"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:text="SignIn" />
+        android:text="@string/btnSignUp"
+        android:hint="@string/btnSignUp" />
 
     <Button
         android:layout_width="match_parent"

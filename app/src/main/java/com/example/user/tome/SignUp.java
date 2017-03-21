@@ -17,9 +17,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
-import java.util.Date;
-
-public class SignIn extends AppCompatActivity {
+public class SignUp extends AppCompatActivity {
 private EditText etEmail;
     private EditText etPassword;
     private EditText etRePassword;
@@ -32,14 +30,14 @@ private EditText etEmail;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_signin);
        DatabaseReference reference = FirebaseDatabase.getInstance().getReference();
         reference.setValue("hello world");
         reference.push().setValue("hello world");
         etEmail=(EditText) findViewById(R.id.etEmail);
         etPassword=(EditText)findViewById(R.id.etpassword);
         etRePassword=(EditText)findViewById(R.id.etRePassword);
-        etName=(EditText)findViewById(R.id.etName);
+        etName=(EditText)findViewById(R.id.etSearch);
         btnSave=(Button)findViewById(R.id.btnSave);
         auth= FirebaseAuth.getInstance();
         eventHandler();
@@ -73,19 +71,22 @@ private EditText etEmail;
             isOk = false;
         }
         if (isOk) {
-            //msh 3arfe aza crraet ao sign in
-           creatAcount(stEmail, stpassword);
+            Intent i=new Intent(SignUp.this, TheFirst.class);
+            startActivity(i);
+          signIn(stEmail, stpassword);
         }
     }
 
         private void eventHandler()
     {
+
+
+
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-              //  Intent i=new Intent(SignIn.this, TheFirst.class);
                 dataHandler();
-            //  startActivity(i);
+
             }
 
         });
@@ -99,13 +100,13 @@ private EditText etEmail;
             if(user!=null)
             {
                 //user is signed in
-                Toast.makeText(SignIn.this, "user is signed in.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SignUp.this, "user is signed in.", Toast.LENGTH_SHORT).show();
 
             }
             else
             {
                 //user signed out
-                Toast.makeText(SignIn.this, "user signed out.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SignUp.this, "user signed out.", Toast.LENGTH_SHORT).show();
 
             }
         }
@@ -123,25 +124,27 @@ private EditText etEmail;
             auth.removeAuthStateListener(authStateListener);
     }
 
-    private void creatAcount(String Email, String Password ) {
-        auth.createUserWithEmailAndPassword(Email,Password).addOnCompleteListener(SignIn.this, new OnCompleteListener<AuthResult>() {
+    private void signIn(String email, String passw) {
+        auth.signInWithEmailAndPassword(email,passw).addOnCompleteListener(SignUp.this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful())
                 {
-                    Toast.makeText(SignIn.this, "Authentication Successful.", Toast.LENGTH_SHORT).show();
-                    //updateUserProfile(task.getResult().getUser());
-                    finish();
+                    Toast.makeText(SignUp.this, "signIn Successful.", Toast.LENGTH_SHORT).show();
+                    Intent i =new Intent(SignUp.this,MainActivity.class);
+                    startActivity(i);
+                    // Intent intent=new Intent(LogInActivity.this,MainFCMActivity.class);
+                    //   startActivity(intent);
+                    //  finish();
                 }
                 else
                 {
-                    Toast.makeText(SignIn.this, "Authentication failed."+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(SignUp.this, "signIn failed."+task.getException().getMessage(), Toast.LENGTH_SHORT).show();
                     task.getException().printStackTrace();
                 }
             }
         });
     }
-
 
 
     private FirebaseAuth.AuthStateListener authStateListener=new FirebaseAuth.AuthStateListener() {
@@ -152,13 +155,13 @@ private EditText etEmail;
             if(user!=null)
             {
                 //user is signed in
-                Toast.makeText(SignIn.this, "user is signed in.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SignUp.this, "user is signed in.", Toast.LENGTH_SHORT).show();
 
             }
             else
             {
                 //user signed out
-                Toast.makeText(SignIn.this, "user signed out.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(SignUp.this, "user signed out.", Toast.LENGTH_SHORT).show();
 
             }
 

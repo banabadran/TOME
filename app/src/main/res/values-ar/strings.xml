@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TOME</string>
+    <string name="Name">الاسم</string>
+    <string name="btnDiary">مذكرات</string>
+    <string name="btnForgetPassword">اعادة كلمة المرور</string>
+    <string name="btnHelp">المساعده</string>
+    <string name="btnMassage">رسائل</string>
+    <string name="btnOk">حسنا</string>
+    <string name="btnPhoto">صور</string>
+    <string name="btnSave">حفظ</string>
+    <string name="btnSend">ارسل</string>
+    <string name="btnSignIn">تسجيل الدخول</string>
+    <string name="btnVideo">فيديو</string>
+    <string name="etEmail">البريد الالكتروني</string>
+    <string name="etPassword">كلمة المرور</string>
+    <string name="etRePassword">اعادة كتابة كلمة المرور</string>
+    <string name="logIn">تسجيل الدخول</string>
+    <string name="btnSignUp">سجل الدخول</string>
+    <string name="signup">سجل الدخول</string>
+</resources>

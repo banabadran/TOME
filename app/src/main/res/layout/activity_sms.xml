@@ -7,54 +7,57 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".SignIn">
-
+    tools:context=".AddSms">
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true">
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textEmailAddress"
-            android:ems="10"
-            android:id="@+id/etEmail"
-            android:hint="@string/etEmail" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:ems="10"
-            android:id="@+id/etpassword"
-            android:hint="@string/etPassword" />
-
-        <EditText
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:inputType="textPassword"
-            android:ems="10"
-            android:id="@+id/etRePassword"
-            android:hint="@string/etRePassword" />
+        android:weightSum="1">
 
         <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:inputType="textPersonName"
             android:ems="10"
-            android:id="@+id/etName"
+            android:id="@+id/etSearch"
             android:hint="@string/Name" />
 
-        <Button
-            style="?android:attr/buttonStyleSmall"
+        <EditText
+            android:layout_width="197dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/etSearch"
+            android:hint="@string/etText" />
+
+        <EditText
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/btnSave"
-            android:text="@string/btnSave" />
+            android:inputType="number"
+            android:ems="10"
+            android:id="@+id/etNumber"
+            android:hint="@string/etNumber" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:inputType="date"
+            android:ems="10"
+            android:id="@+id/etDate"
+            android:hint="@string/etDate" />
+
+        <EditText
+            android:layout_width="204dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/isIncome"
+            android:layout_weight="0.11"
+            android:hint="@string/IsIncome" />
+
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnAdd"
+            android:layout_gravity="right"
+            android:src="@android:drawable/ic_input_add" />
 
     </LinearLayout>
+
 </RelativeLayout>
